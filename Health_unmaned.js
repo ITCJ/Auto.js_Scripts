@@ -30,9 +30,9 @@ function health(){
     click("健康上报");
 
     //重复填报出出现确认按钮，确认
-    var queren = textContains("确认").findOne();
-    if(textContains("确认").exists())
-        queren.click();
+    // var queren = textContains("确认").findOne();
+    // if(textContains("确认").exists())
+    //     queren.click();
 
     // while(!textContains("确认").exists()){
     //     // toastLog("加载疫情防控信息采集平台")
@@ -44,7 +44,7 @@ function health(){
     while(!textContains("成功获取到位置").exists()){
         sleep(500);
     };
-    click("签到");
+    click("签到",2);
     sleep(5000);
 
     var wendu = textContains("37.2").findOnce();
